@@ -1,0 +1,38 @@
+/*
+Document   : jquery.pnotify.default.icons.css
+Created on : Nov 24, 2009, 2:58:21 PM
+Author     : Hunter Perrin
+Version    : 1.2.0
+Link       : http://pinesframework.org/pnotify/
+Description:
+	Pines Icon styling for Pines Notify.
+*/
+
+.ui-pnotify .picon {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 17px;
+    height: 17px;
+}
+.ui-pnotify-title {
+    line-height: 17px;
+    min-height: 17px;
+}
+.ui-pnotify-icon > span {
+    background-size: 40px;
+    width: 40px;
+    height: 40px;
+}
+.icon-warning-sign {
+    background: url(/img/error.png) no-repeat;
+}
+.icon-exclamation-sign {
+    background: url(/img/WarningTriangle.png) no-repeat;
+}
+.icon-ok-sign {
+    background: url(/img/Success.png) no-repeat;
+}
+.icon-info-sign {
+    background: url(/img/Sign-Info-icon.png) no-repeat;
+}

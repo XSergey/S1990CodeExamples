@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name='viewport' content="width=1195,user-scalable=no">
+	<title>Real Connex</title>
+    {{ minify.css([
+       'fonts/stylesheet', 'style', 'adaptive', '/js/SimpleNotifyBar/jquery.notifyBar'
+    ]) }}
+
+    {{ minify.script([
+        'jquery-1.9.1.min', 'html5', 'SimpleNotifyBar/jquery.notifyBar'
+    ]) }}
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".menu-links").on("click","ul li",function(){
+                var dataText = $(this).find(".tabText").html();
+                $(".content-inner").find("div.text").hide();
+                $(".menu-links ul li").removeClass("active");
+
+                $(".content-inner").find("div.text").html(dataText);
+                $(".content-inner").find("div.text").slideDown("slow");
+
+                $(this).addClass("active");
+            });
+        });
+    </script>
+
+    {{ _view.element('analyticScripts/on_landing') }}
+
+</head>
+<body id="theme">
+    {{ session.flash('flash') }}
+	<img src="/img/main-img.jpg" alt="" class="main-img">
+	<div id="wrapper">
+		<div id="page">
+			<header id="header">
+				<div class="holder">
+					<strong class="logo"><a href="/">Real Connex</a></strong>
+					<ul class="nav">
+						<li><a href="#" class="login">Login</a></li>
+					</ul>
+				</div>
+			</header>
+			
+            {{ _view.element('homeNav') }}
+            
+			<section class="content-inner">
+				<div class="text">
+					<p>Welcome to RealConnex. A game changer for Developers, Sponsors, GP's.</p>
+					<p>Use RealConnex to find profiled real estate investors, lenders, advisors, JV partners and all the other professional services you need regardless of deal size. Think Match.com meets a more relevant LinkedIn for the real estate professional</p></p>
+				</div>
+                <div class="hold">
+                    {{ _view.fetch('content') }}
+                </div>
+			</section>
+		</div>
+
+        {{ _view.element('footer') }}
+
+	</div>
+</body>
+</html>

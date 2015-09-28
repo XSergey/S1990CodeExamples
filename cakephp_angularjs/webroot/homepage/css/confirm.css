@@ -1,0 +1,47 @@
+/*notifine confirm*/
+.btn-confirm {
+    /*background-color: #202020;*/
+    margin-left: 10px;
+}
+
+.middles {
+    right: 40% !important;
+    top: 30% !important;
+    background-color: #fff !important;
+    border: 3px solid #ec780a;
+}
+
+.middles .alert {
+    background-color: #fff;
+    color: #333;
+}
+
+.middles .alert h4 {
+    color: #333;
+}
+
+.btn-container {
+    border-top: 1px solid #d0d0d0;
+    padding: 10px 0 0;
+}
+.sbm {
+    float: right;
+    background: #F58320;
+    color: #fff;
+    width: 57px;
+    height: 34px;
+    text-align: center;
+    font: 14px/34px 'PMSemiBold', sans-serif;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.sbm:hover {
+    text-decoration: none;
+}
+.cancel {
+    background: #dddddd;
+    color: #333;
+    width: 70px;
+}

@@ -1,0 +1,267 @@
+/* messages */
+.addr-book-cont .col23 {
+    width: 75%;
+    background: #fff;
+    border-left: 1px solid #dfdfdf;
+}
+
+.panel-holder .link {
+    float: left;
+    background: #f6f6f6;
+    border: 1px solid #e7e8ea;
+    margin: 0 8px 0 0;
+    padding: 6px 0 0;
+    color: #000001;
+    height: 32px;
+    width: 40px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.panel-holder .link i {
+    font-size: 18px;
+    color: #bdbec2;
+}
+
+.panel-holder .link:hover {
+    background: #7b8487;
+    border-color: #7b8487;
+    color: #fff;
+    text-decoration: none;
+}
+
+.panel-holder .link:hover i {
+    color: #fff;
+}
+
+.addr-book-cont .col23 .people li {
+    font: 16px/18px 'PM', sans-serif;
+    color: #9c9da0;
+}
+
+.addr-book-cont .people .check-box:checked + label {
+    color: #9c9da0;
+}
+
+.addr-book-cont .people li .date {
+    float: right;
+    color: #9c9da0;
+    margin: 0 15px 0 0;
+    font: 14px/16px "PM", sans-serif;
+}
+
+.addr-book-cont .col23 .people li span a {
+    color: #4d4d4d;
+    font-weight: normal;
+}
+
+.addr-book-cont .people .check-box:checked + label span a {
+    color: #e77e23;
+}
+
+.addr-book-cont .people li strong {
+    font-family: "PMBold", sans-serif;
+}
+
+.addr-book-cont .people li strong .viewed {
+    font-family: "PMLight", sans-serif;
+}
+
+.addr-book-cont .people li:hover span {
+    color: #dedbdb;
+}
+
+.addr-book-cont .people li:hover span a,
+.addr-book-cont .people li:hover .date,
+.addr-book-cont .people li:hover .check-box:checked + label span a {
+    color: #fff;
+}
+
+.mess-cont .top-section {
+    min-height: 32px;
+}
+
+.mess-cont .ttl2 {
+    line-height: 32px;
+}
+
+.mess-cont .compose,
+.mess-cont .back {
+    display: block;
+    border: 1px solid #e7e8ea;
+    width: 150px;
+    height: 30px;
+    color: #000;
+    font: 14px/31px 'PM', sans-serif;
+    background: #fff;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.mess-cont .compose {
+    margin: 19px 0;
+}
+
+.mess-cont .compose i,
+.mess-cont .back i {
+    color: #bdbec2;
+    font-size: 18px;
+    margin: 5px 0 0 10px;
+    float: left;
+}
+
+.mess-cont .compose:hover,
+.mess-cont .back:hover {
+    background: #7b8487;
+    border-color: #7b8487;
+    color: #fff;
+    text-decoration: none;
+}
+
+.mess-cont .top-section .pager {
+    float: right;
+    line-height: 22px;
+    margin: 5px 0 0;
+}
+
+.mess-cont .top-section .pager a {
+    display: inline-block;
+    background: #fff;
+    color: #7c8487;
+    font-size: 20px;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.mess-cont .top-section .pager a:hover {
+    background: #7b8487;
+    color: #fff;
+}
+
+.mess-cont .folders {
+    margin: 0 -20px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mess-cont .folders li {
+    padding: 7px 0;
+    font: 14px/16px 'PM', sans-serif;
+}
+
+.mess-cont .folders li a {
+    color: #636c75;
+    display: block;
+    padding: 6px 0 6px 10px;
+    position: relative;
+}
+
+.mess-cont .folders li a:hover,
+.mess-cont .folders li.active a {
+    background: #7b8487;
+    color: #fff;
+    text-decoration: none;
+}
+
+.mess-cont .folders li.active a {
+    font-family: 'PMBold', sans-serif;
+}
+
+.mess-cont .folders li a:hover:after,
+.mess-cont .folders li.active a:after {
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 14px solid transparent;
+    border-left: 15px solid #7b8487;
+    border-bottom: 14px solid transparent;
+}
+
+.mess-info {
+    padding: 0 0 20px;
+}
+
+.mess-info .holder {
+    overflow: hidden;
+}
+
+.mess-info img {
+    float: left;
+    margin: 0 18px 0 0;
+}
+
+.mess-info dl {
+    overflow: hidden;
+    margin: 0 0 10px;
+    color: #000;
+    font-size: 14px;
+}
+
+.mess-info dl dt {
+    float: left;
+    margin: 0 5px 0 0;
+    font-family: 'PMBold', sans-serif;
+}
+
+.mess-info dl dd {
+    overflow: hidden;
+    margin: 0;
+}
+
+.mess-info .date {
+    display: block;
+    color: #9c9da0;
+    font-size: 14px;
+}
+
+.panel-holder2 {
+    padding: 9px 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.panel-holder2 .link {
+    width: auto;
+    padding: 6px 10px 0;
+}
+
+.addr-book-cont .mess-body {
+    color: #000;
+    font: 14px/24px 'PM', sans-serif;
+    padding: 25px 0 5px;
+    height: 392px;
+    overflow: auto;
+    margin: 10px 0 0 0;
+}
+.addr-book-cont .mess-body>div {
+
+}
+
+
+.addr-book-cont .mess-body p {
+    margin: 0 0 20px;
+}
+
+#content .mess-cont h2 {
+    font: 24px/26px "PMSemiBold", sans-serif;
+    color: #000;
+    margin: 30px 0 15px;
+}
+
+/* end messages */

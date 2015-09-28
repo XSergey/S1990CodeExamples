@@ -1,0 +1,81 @@
+.selectbox {
+	vertical-align: middle;
+	cursor: pointer;
+	float:right;
+}
+.selectbox .select {
+	width:312px;
+	height: 30px;
+	padding-bottom: 0!important;
+	border:0;
+	float: right;
+	background:#fff;
+	padding-left: 12px;
+	border:1px solid #666666;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-khtml-border-radius:3px;
+	behavior:url(css/PIE.htc);
+	position:relative;
+}
+.selectbox .select .text {
+	display: block;
+    width: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+    padding: 7px 0;
+    color: #404040;
+    font:14px/16px 'PM', sans-serif;
+}
+.selectbox .trigger {
+	position: absolute;
+	top: 12px;
+	right: 7px;
+	width: 12px;
+	height:6px;
+}
+.selectbox .trigger .arrow {
+    position: absolute;
+    top: 0px;
+	right: 0px;
+	width: 12px;
+	height:6px;
+    background: url(../img/arrow-2.png) no-repeat;
+    overflow: hidden;
+}
+.selectbox .dropdown {
+	top:31px!important;
+	bottom:auto!important;
+    border: 0;
+    position: absolute;
+    z-index: 100;
+	width:312px;
+	margin:-5px 0 0;
+	padding:10px 0 10px 12px;
+	border:1px solid #666666;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-khtml-border-radius:3px;
+	behavior:url(css/PIE.htc);
+	max-height:228px;
+	background:#fff;
+}
+.selectbox .dropdown ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.selectbox .dropdown li {
+	padding:8px 0 0;
+	color:#404040;
+   	font:14px/16px 'PM', sans-serif;
+	border:0;
+	float:none;
+}
+.selectbox li:hover,
+.selectbox li.selected {color: #333;}
+.selectbox li.disabled {color: #333;}
+.selectbox li.disabled:hover {background: none;}

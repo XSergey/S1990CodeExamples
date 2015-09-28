@@ -1,0 +1,33 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    {{ html.css([
+       'vt_template'
+    ]) }}
+
+    {{ html.script([
+        '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'
+    ]) }}
+
+    <title>{{ title_for_layout|default('CakePHP 2 Template') }}</title>
+
+</head>
+
+<body>
+
+    {{ _view.element('header') }}
+
+    <div class="contentBox">
+        <div class="innerBox">
+            {{ _view.fetch('content') }}
+            <div id="sidebarRight">{{ _view.element('sidebarRight') }}</div>
+        </div>
+    </div>
+
+    {{ _view.element('footer') }}
+
+</body>
+</html>

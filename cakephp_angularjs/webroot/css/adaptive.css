@@ -1,0 +1,72 @@
+html {-webkit-text-size-adjust:none;}
+/* ------------------- iPad landscape ------------------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape), (max-width : 1024px) {
+	img {
+		height:auto;
+		max-width:100%;
+		width:auto\9;
+	}
+	#sidebar,
+	#content .center-banner {
+		/*display:none;*/
+	}
+}
+/* ------------------- iPad portrait ------------------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+	
+}
+/* ------------------- Smartphones (portrait and landscape) ------------------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 640px), (min-width : 320px) and (max-width : 640px) {
+	img {
+		height:auto;
+		max-width:100%;
+		width:auto\9;
+	}
+	.nav-holder .open-menu {
+		display:inline;
+		padding:0 20px 0 0;
+		background:url(../img/plus.png) no-repeat 100% 3px;
+		color:#930017;
+	}
+	.nav-holder .open-menu.current {background:url(../img/minus.png) no-repeat 100% 3px;}
+	
+	
+	.nav-holder .open-menu {
+		display:block;
+		float:right;
+		width:44px;
+		height:38px;
+		background:#4294CC url(image/nav-icon.png) no-repeat 50% 50%;
+		overflow:hidden;
+		text-indent:-9999px;
+		margin:-22px 0 5px;
+		cursor:pointer;
+		border-radius:3px;
+		-moz-border-radius:3px;
+		-webkit-border-radius:3px;
+		behavior:url(PIE.htc);
+		position:relative;
+	}
+	.nav-holder .open-menu.current {background-color:#d6c772;}
+	
+}
+/* ------------------- Smartphones (portrait) ------------------- */
+@media only screen and (max-width : 360px) {
+	
+}
+/* Start Optimizing graphics Retina */
+@media screen and (max-device-width : 640px) and (max-width : 640px) and (-webkit-device-pixel-ratio: 2) {
+	#header .logo {
+	  	background-image:url(image/logo.png);
+		background-size:264px 113px;
+	}
+	#header .open-menu {
+		background-image:url(image/plus@2x.png);
+		background-size:11px 11px;
+	}
+	#header .open-menu.current {
+		background-image:url(image/minus@2x.png);
+		background-size:11px 11px;
+	}
+}
+/* End Optimizing graphics Retina */

@@ -1,0 +1,102 @@
+<script>
+    window.angularInjections = ['ngRoute', 'ngResource', 'ngSanitize']
+</script>
+{{ minify.css([
+    'address-book',
+    'messages',
+    'selectbox',
+    '/js/fancybox/jquery.fancybox'
+]) }}
+
+{{ minify.script([
+    'fancybox/jquery.fancybox.pack',
+    'jquery.custom-radio-checkbox.min.js',
+    'app/vendors/angular.min',
+    'app/vendors/angular-route.min',
+    'app/vendors/angular-resource.min',
+    'app/vendors/angular-sanitize.min.js',
+    'app/main',
+    'app/controllers/addressBookController',
+    'app/controllers/messageControllers',
+    'app/services/addressesFactory',
+    'app/services/messagesFactory',
+    'app/services/cacheFactory',
+    'app/directives/directives',
+    'app/directives/angucomplete',
+    'app/services/dragdrop.min',
+    'app/services/uploaderService',
+    'plu_uploader/plupload.full',
+    'selectbox',
+    'nicedit',
+    'baron.full'
+]) }}
+
+<div class="img-main">
+    <img src="/img/new/demo/image-main-3.jpg" alt="">
+</div>
+<div id="main" class="side profile clearfix" data-ng-app="app" data-ng-controller="AppController">
+    <section id="content" class="clearfix" data-ng-controller="AddressBook.Main" data-ng-init="activeTab='address'">
+        <div class="top-title">
+            <h1>CRM</h1>
+        </div>
+        <div id="uploadCSVFile" style="display: none;"></div>
+        <div class="import clearfix">
+			<strong> Import Contacts</strong>
+            <a href="javascript:"
+               popup="js/templates/addressBook/importContacts.htm"
+               popup-after-close="clearImportFile()"
+               popup-before-show="importFromFile('gmail')">
+                <img src="img/new/gmail2.png" alt="">
+            </a>
+            <a href="javascript:"
+               popup="js/templates/addressBook/importContacts.htm"
+               popup-after-close="clearImportFile()"
+               popup-before-show="importFromFile('outlook')">
+                <img src="img/new/outlook2.png" alt="">
+            </a>
+            <a href="javascript:"
+               popup="js/templates/addressBook/importContacts.htm"
+               popup-after-close="clearImportFile()"
+               popup-before-show="importFromFile('apple')">
+                <img src="img/new/apple2.png" alt="">
+            </a>
+            <a href="javascript:"
+               popup="js/templates/addressBook/importContacts.htm"
+               popup-after-close="clearImportFile()"
+               popup-before-show="importFromFile('linked')">
+                <img src="img/new/linked2.png" alt="">
+            </a>
+            <div class="tooltip-big" data-ng-class="{show: (isTooltipsVisible && tooltip.start.show)}" data-ng-init="tooltip.start.show=true">
+				<p><strong>Getting Started</strong></p>
+				<p> Start building your network by inviting users from your contacts.  This ensures you can easily grow your business with new and existing colleagues.</p>
+				<div class="btm clearfix">
+					<span class="dismiss" data-ng-click="tooltip.start.show=false">Dismiss X</span>
+				</div>
+			</div>
+		</div>
+        <div class="tabs-links clearfix">
+            <a href="#!/contacts" data-ng-class="{current:isCurrentLocation('/contacts')}">Address Book</a>
+			<a href="#!/messages" data-ng-class="{current:isCurrentLocation('/messages')}">Messages</a>
+			<span class="tooltip-control" data-ng-click="isTooltipsVisible=!isTooltipsVisible" data-ng-show="isCurrentLocation('/contacts')">
+                <strong data-ng-class="{close: isTooltipsVisible, open:!isTooltipsVisible}">Need Help? Click to display tooltips.</strong>
+                <strong data-ng-class="{close: !isTooltipsVisible, open:isTooltipsVisible}"> Click to dismiss all tooltips.</strong>
+            </span>
+		</div>
+        <div data-ng-view=""></div>
+    </section>
+
+    <aside id="sidebar" class="aside">
+        <div class="sidebar-inner">
+            <div class="box" style="padding:0">
+                <div class="tnf-newsroom-wrapper" style="height: 1000px"></div>
+                {{ news }}
+            </div>
+        </div>
+    </aside>
+</div>
+<script type="text/javascript">
+    window.projectsList = {{ projectsArr|json_encode }};
+    window.currentUserId = {{ authProfile.id }};
+    window.currentUserCompanyId = '{{ companyId | default("") }}';
+    $(".check").Custom({customStyleClass: 'checkbox', customHeight: '17', enableHover: false});
+</script>
